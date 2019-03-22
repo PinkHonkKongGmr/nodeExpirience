@@ -1,0 +1,77 @@
+<%- include layout/header.ejs %>
+
+<div class="regAndAutforms">
+  <form class="autorizationForm" method="post">
+    <input type="text" name="name" value="" id="login"><label for="name">логин</label>
+    <input type="password" name="password" value="" id="password"><label for="password">пароль</label>
+    <button type="submit" name="autbutton" class='autBut'>авторизация</button>
+  </form>
+
+  <div class="popUp regPopUp">
+    <div class="popupClose">
+      <i class="fas fa-times"></i>
+    </div>
+    <form class="registationForm" method="post">
+      <div class="bank loginbank">
+        <label for="newName">логин<span>*</span></label><input type="text" name="newName" value="" id='regName'>
+        <div class="alreadyExist loginExist">
+          <p>Этот логин уже занят</p>
+        </div>
+        <div class="ok">
+          <i class="far fa-thumbs-up"></i>
+        </div>
+      </div>
+      <div class="bank passwordBank"><label for="newPassword">пароль<span>*</span></label><input type="password" name="newPassword" value="" id='regPas'>
+        <div class="alreadyExist">
+          <p>Этот логин уже занят</p>
+        </div>
+        <div class="passwordValidator">
+          <div class="colorSwap longer">
+            Длиннеe 7 символов
+          </div>
+          <div class="colorSwap digits">
+            Хотябы одна цифра
+          </div>
+          <div class="colorSwap register">
+            Хотябы одна буква верхнего регистра
+          </div>
+        </div>
+        <div class="psok">
+          <i class="far fa-thumbs-up"></i>
+        </div>
+      </div>
+      <div class="bank ConfirmpasswordBank"><label for="newPasswordConfirm">повторите пароль<span>*</span></label>
+        <div class="pscok">
+          <i class="far fa-thumbs-up"></i>
+        </div><input type="password" name="newPasswordConfirm" value="" id='regPasCon'>
+      </div>
+      <div class="bank mailbank"><label for="newMail">почта<span>*</span></label><input type="text" name="newMail" value="" id='regMail'>
+        <div class="alreadyExist mailExist">
+          <p>Этот mail уже занят</p>
+        </div>
+        <div class="mailok">
+          <i class="far fa-thumbs-up"></i>
+        </div>
+      </div>
+      <div><button type="submit" name="regSub" class='regSub'>Зарегестрироваться</button>
+        <div class="warning">
+          <div class="">
+            <i class="far fa-sad-tear"></i>
+          </div>
+          <div class="">
+            <p>убедитесь, что напротив каждого поля стоит знак</p>
+            <div class="warningOk">
+              <i class="far fa-thumbs-up"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </form>
+  </div>
+  <div class="popUp regSucess">
+    Поздравляю!Регестрация прошла успешно!
+  </div>
+  <button type="button" name="regbutton" class="regBut">Еще не зарегестрировался? Регистрируйся!</button>
+</div>
+<%- include layout/footer.ejs %>

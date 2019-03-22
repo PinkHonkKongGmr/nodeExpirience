@@ -1,0 +1,25 @@
+<%- include layout/header.ejs %>
+
+
+<h1>Автосток</h1>
+
+<div class="ranger">
+  <input type="range" class="price" min="10000" max="100000000" step="5000">
+  <input type="range" class="powerful" min="50" max="2000" step="10">
+</div>
+
+<a href="/create">Ведите данные вашего автомобиля</a>
+<ul class="models">
+  <% cars.forEach(function(item){ %>
+  <li>
+    Производитель:
+    <%=item.manufactured %><br>
+    Модель:
+    <%=item.model %><br>
+    Лошадиные силы:
+    <%=item.power %><br>
+  </li>
+  <% }); %>
+</ul>
+
+<%- include layout/footer.ejs %>

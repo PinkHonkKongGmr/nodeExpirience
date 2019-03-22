@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Black+Ops+One');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 19px;
+  font-family: 'Black Ops One', cursive;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+li {
+  margin-right: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

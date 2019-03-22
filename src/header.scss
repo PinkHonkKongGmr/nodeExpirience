@@ -1,0 +1,15 @@
+$bg-color: #ef3038;
+$mainPadding: 20px 40px;
+
+.header_bottom,
+.header_top {
+  padding: $mainPadding;
+}
+
+.header_top {
+  background: $bg-color;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+}
